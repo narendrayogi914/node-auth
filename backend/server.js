@@ -39,7 +39,7 @@ app.use("/auth", require("./Routes/AuthRouter")); // Authentication routes
 app.use("/products", require("./Routes/ProductRouter")); // Product routes
 
 // Test endpoint
-app.get("/ping", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Server is running securely!");
 });
 
