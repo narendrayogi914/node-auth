@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "builds": [
@@ -7,21 +6,18 @@
       "use": "@vercel/node-server"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/index.html"
-    }
-  ],
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "server.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "frontend/index.html"
+    },
+    {
       "source": "/",
-      "destination": "/frontend/index.html"
+      "destination": "frontend/index.html"
     }
   ]
 }
-
